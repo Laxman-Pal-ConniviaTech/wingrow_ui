@@ -34,8 +34,8 @@ const Checkout = () => {
     const confirmBooking = async() => {
       const amount = result * 100;
       try {
-        // if(result){const orderUrl = "http://localhost:4000/order";
-        if(result){const orderUrl = "`${RECT_APP_API_ENDPOINT}/order`";
+        if(result){const orderUrl = "http://localhost:4000/order";
+        // if(result){const orderUrl = "`${RECT_APP_API_ENDPOINT}/order`";
         const {data} = await axios.post(orderUrl,{amount:amount},{headers:authHeader()})
         initPayment(data.data)}
       } catch (error) {

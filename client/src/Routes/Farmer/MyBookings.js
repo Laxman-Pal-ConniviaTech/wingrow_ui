@@ -30,8 +30,8 @@ const MyBookings = () => {
        const [data] = cancelledStall;
        data.cancelledAt = dayjs(Date.now()).format("YYYY-MM-DD");
 
-    //    axios.delete("http://localhost:4000/bookedstalls" , { headers: authHeader()  , data:{id: DeleteId}})
-       axios.delete(`${REACT_APP_API_ENDPOINT}/bookedstalls` , { headers: authHeader()  , data:{id: DeleteId}})
+       axios.delete("http://localhost:4000/bookedstalls" , { headers: authHeader()  , data:{id: DeleteId}})
+    //    axios.delete(`${REACT_APP_API_ENDPOINT}/bookedstalls` , { headers: authHeader()  , data:{id: DeleteId}})
         .then(res => {
             if(res)
             {

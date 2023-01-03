@@ -88,8 +88,8 @@ function Test({ setbookingDetails , setValue }) {
       return;
     }
     try {
-      // const orderUrl = "http://localhost:4000/order";
-      const orderUrl = `${REACT_APP_API_ENDPOINT}/order`;
+      const orderUrl = "http://localhost:4000/order";
+      // const orderUrl = `${REACT_APP_API_ENDPOINT}/order`;
       const { data } = await axios.post(
         orderUrl,
         { amount: price * 100 },
@@ -113,8 +113,8 @@ function Test({ setbookingDetails , setValue }) {
 
       handler: async (response) => {
         try {
-          // const verifyUrl = "http://localhost:4000/verify"; 
-          const verifyUrl = `${REACT_APP_API_ENDPOINT}/verify`;
+          const verifyUrl = "http://localhost:4000/verify"; 
+          // const verifyUrl = `${REACT_APP_API_ENDPOINT}/verify`;
           const { data } = await axios.post(verifyUrl, response, {
             headers: authHeader(),
           });
@@ -137,8 +137,8 @@ function Test({ setbookingDetails , setValue }) {
             (total, item) => item.stallPrice + total,
             0
           );
-          // const Url = "http://localhost:4000/bookedstalls"; 
-          const Url = `${REACT_APP_API_ENDPOINT}/bookedstalls`;
+          const Url = "http://localhost:4000/bookedstalls"; 
+          // const Url = `${REACT_APP_API_ENDPOINT}/bookedstalls`;
 
           axios
             .post(Url, responseData, { headers: authHeader() })
