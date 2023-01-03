@@ -157,7 +157,7 @@ const Admin = () => {
       // }
       if(response === true){
         // axios.delete("http://localhost:4000/cancelledstalls" , { headers: authHeader()  , data:{id: id}}).then(res=>{
-          axios.delete("`${REACT_APP_API_ENDPOINT}/cancelledstalls`" , { headers: authHeader()  , data:{id: id}}).then(res=>{
+          axios.delete(`${REACT_APP_API_ENDPOINT}/cancelledstalls` , { headers: authHeader()  , data:{id: id}}).then(res=>{
           const data = res?.data;
           const filter = CancelledStalls.filter(e=>e._id !== data._id);
           setCancelledStalls(filter)

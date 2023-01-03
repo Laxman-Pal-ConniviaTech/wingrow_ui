@@ -31,13 +31,13 @@ const MyBookings = () => {
        data.cancelledAt = dayjs(Date.now()).format("YYYY-MM-DD");
 
     //    axios.delete("http://localhost:4000/bookedstalls" , { headers: authHeader()  , data:{id: DeleteId}})
-       axios.delete("`${REACT_APP_API_ENDPOINT}/bookedstalls`" , { headers: authHeader()  , data:{id: DeleteId}})
+       axios.delete(`${REACT_APP_API_ENDPOINT}/bookedstalls` , { headers: authHeader()  , data:{id: DeleteId}})
         .then(res => {
             if(res)
             {
                 const resp = res.data;
                 const filData = MyStalls.filter(e => e._id !== resp._id)
-                axios.post("`${REACT_APP_API_ENDPOINT}/cancelledstalls`" , data , {headers:authHeader()})
+                axios.post(`${REACT_APP_API_ENDPOINT}/cancelledstalls` , data , {headers:authHeader()})
                 setMyStalls(filData);
                 toast.success('Cancelled successfully!', {
                     position: "top-center",

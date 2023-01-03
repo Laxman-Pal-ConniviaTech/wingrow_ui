@@ -10,8 +10,8 @@ const fileUpload = require('express-fileupload')
 const{REACT_APP_API_ENDPOINT} = process.env
 
 var corsOptions = {
-  origin: "`${REACT_APP_API_ENDPOINT}`"
-  // origin: "*"
+  // origin: `${REACT_APP_API_ENDPOINT}`
+  origin: "*"
 };
 
 app.use(bodyParser.urlencoded({ extended: false }))
