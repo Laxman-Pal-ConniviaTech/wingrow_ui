@@ -1,9 +1,25 @@
-import React from "react";
+import React,{useEffect} from "react";
 import '../../styles/Ticket.css'
 import Spinner from "../../components/Spinner";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import authHeader from '../../services/auth.headers';
+
+const{REACT_APP_API_ENDPOINT}=process.env;
 
 function Ticket ({bookingDetails}) {
+    useEffect(() => {
+      twilioMsg();
+      
+    });
+
+    const twilioMsg = async() => {
+        console.log(bookingDetails)
+        // const orderUrl = "http://localhost:4000/twilio"; 
+        const orderUrl = "`${REACT_APP_API_ENDPOINT}/twilio`";
+        const {data} = await axios.post(orderUrl,{bookingDetails:bookingDetails},{headers:authHeader()});
+        console.log(data)
+    }
     const {BookedStalls} = bookingDetails
     const navigate = useNavigate()
     const bookStr = BookedStalls?.toString();
@@ -22,6 +38,8 @@ function Ticket ({bookingDetails}) {
                 <div>Stalls Booked : {bookStr}</div>
                 <br/>
                 <div>Payment Id : {bookingDetails.paymentDetails}</div>
+                <br/>
+                <div>Addess : {bookingDetails.address}</div>
                 <br/>
                 <div>Total Amount : {bookingDetails.totalAmount}</div>
                 <br/>

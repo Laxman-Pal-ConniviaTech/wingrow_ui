@@ -7,9 +7,11 @@ var bodyParser = require('body-parser');
 const path = require('path');
 const fileUpload = require('express-fileupload')
 
+const{REACT_APP_API_ENDPOINT} = process.env
+
 var corsOptions = {
-  // origin: "http://wingrowagritech.herokuapp.com/"
-  origin: "*"
+  origin: "`${REACT_APP_API_ENDPOINT}`"
+  // origin: "*"
 };
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -25,6 +27,7 @@ require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 require("./routes/payment.routes")(app);
 require("./routes/stalls.routes")(app);
+require("./routes/twilio.routes")(app);
 
 mongoose.connect(process.env.DB_CONNECTION, 
   { useNewUrlParser: true,

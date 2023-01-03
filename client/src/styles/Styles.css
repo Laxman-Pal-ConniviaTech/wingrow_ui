@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Jost", sans-serif;
+  /* font-family: "Jost", sans-serif; */
+  font-family: 'Handlee', cursive;
 }
 
 html {
@@ -94,6 +97,7 @@ li {
   width: 40%;
   height: 100%;
   padding: 4rem;
+  font-family: "Arturo Trial", sans-serif;
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
@@ -151,6 +155,7 @@ li {
 .logo h2 {
   font-size: 2.5rem;
   font-weight: 400;
+  font-family: "Arturo Trial", sans-serif;
   text-transform: uppercase;
   background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
   background-clip: text;
@@ -185,6 +190,7 @@ li {
 
 .social-media ul li {
   font-size: 1.6rem;
+  font-family: "Arturo Trial", sans-serif;
 }
 
 .social-media .hamburger-menu {
@@ -201,6 +207,7 @@ li {
   align-items: center;
   font-size: 1.2rem;
   padding: 1rem;
+  font-family: "Arturo Trial", sans-serif;
 }
 
 /* T&C */
@@ -211,7 +218,7 @@ li {
   padding: 20px;
   overflow-y: scroll;
   text-align: justify;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arturo Trial", sans-serif;
   line-height: 1.5;
   align-items: center;
   flex-direction: column;
@@ -263,6 +270,7 @@ li {
   align-items: flex-start;
   width: 50%;
   padding: 0 2rem 2rem 2rem;
+  font-family: "Arturo Trial", sans-serif;
 }
 
 .ReactTags__tag {
@@ -343,6 +351,7 @@ li {
     height: 100%;
     padding: 4rem;
     box-shadow: none;
+    font-family: "Arturo Trial", sans-serif;
   }
 }
 
@@ -524,6 +533,7 @@ li {
     height: 100%;
     padding: 4rem;
     box-shadow: none;
+    font-family: "Arturo Trial", sans-serif;
   }
 }
 
@@ -717,7 +727,7 @@ input {
 .forgot-form-inner h3{
   font-size: 20px;
   font-weight: 400;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arturo Trial', sans-serif;
   margin:  0 0 10px;
 }
 
@@ -758,15 +768,26 @@ font-style: normal;
 font-weight: 700;
 font-size: 8rem;
 line-height: 128.91%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arturo', sans-serif;
   margin: 10px;
   background: linear-gradient(105.42deg, #3AA54B 33.61%, #107C55 80.31%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.we-win{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 128.91%;
+    font-family: 'Arturo', sans-serif;
+    margin: 10px;
+    background: linear-gradient(105.42deg, #972a0e 33.61%, #107C55 80.31%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 
 .next-int{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arturo', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 2rem;

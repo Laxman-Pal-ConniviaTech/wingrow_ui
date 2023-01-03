@@ -17,6 +17,7 @@ const Farmer = () => {
     paymentDetails: "",
     BookedStalls: null,
     stallsBooked: null,
+    address:null,
     totalAmount: null,
   });
 

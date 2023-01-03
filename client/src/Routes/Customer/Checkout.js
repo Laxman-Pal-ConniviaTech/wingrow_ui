@@ -8,6 +8,7 @@ import CheckoutItems from './CheckoutItems';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const{RECT_APP_API_ENDPOINT} = process.env;
 
 const Checkout = () => {
   const { cartsData , Counter , Itemcount} = useContext(productContext);
@@ -33,7 +34,8 @@ const Checkout = () => {
     const confirmBooking = async() => {
       const amount = result * 100;
       try {
-        if(result){const orderUrl = "https://wingrowmarket.onrender.com/order";
+        // if(result){const orderUrl = "http://localhost:4000/order";
+        if(result){const orderUrl = "`${RECT_APP_API_ENDPOINT}/order`";
         const {data} = await axios.post(orderUrl,{amount:amount},{headers:authHeader()})
         initPayment(data.data)}
       } catch (error) {

@@ -21,6 +21,8 @@ import SelectSeatModal from "../../components/SelectSeatModal";
 // import Spinner from '../../components/Spinner';
 const userCurr = AuthService.getCurrentUser();
 
+const{REACT_APP_API_ENDPOINT}=process.env;
+
 const locations = [
   { location: "Hadapsar" },
   { location: "Karve Nagar" },
@@ -100,7 +102,8 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
     }
     try {
       // const orderUrl = "https://wingrowagritech.herokuapp.com/order";
-      const orderUrl = "https://wingrowmarket.onrender.com/order";
+      // const orderUrl = "http://localhost:4000/order";
+      const orderUrl = "`${REACT_APP_API_ENDPOINT}/order`";
       const { data } = await axios.post(
         orderUrl,
         { amount: price * 100 },
@@ -124,7 +127,8 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
 
       handler: async (response) => {
         try {
-          const verifyUrl = "https://wingrowmarket.onrender.com/verify";
+          // const verifyUrl = "http://localhost:4000/verify";
+          const verifyUrl = "`${REACT_APP_API_ENDPOINT}/verify`";
           const { data } = await axios.post(verifyUrl, response, {
             headers: authHeader(),
           });
@@ -147,7 +151,8 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
             (total, item) => item.stallPrice + total,
             0
           );
-          const Url = "https://wingrowmarket.onrender.com/bookedstalls";
+          // const Url = "http://localhost:4000/bookedstalls";
+          const Url = "`${REACT_APP_API_ENDPOINT}/bookedstalls`";
 
           axios
             .post(Url, responseData, { headers: authHeader() })

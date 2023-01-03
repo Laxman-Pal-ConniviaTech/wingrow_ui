@@ -1,10 +1,15 @@
+/* @import url('https://fonts.googleapis.com/css?family=Sofia'); */
+@import url('//db.onlinewebfonts.com/c/efa547ee1a9f8b027d37063c310d01ac?family=Arturo+Trial');
+
 .terms{
     background-color:rgb(208, 245, 208);
     color:black;
+    font-family: "Arturo Trial", sans-serif;
     padding: 50px;
 }
 .heading{
     text-align: center;
+    font-family: "Arturo Trial", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -23,6 +28,7 @@
   }
 .tabledata{
     align-content: center;
+    font-family: "Arturo Trial", sans-serif;
     width:100
 
 }

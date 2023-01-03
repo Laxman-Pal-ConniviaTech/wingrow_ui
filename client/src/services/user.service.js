@@ -1,8 +1,10 @@
 import axios from 'axios';
 import authHeader from './auth.headers';
 
+const{REACT_APP_API_ENDPOINT}=process.env;
+
 // const API_URL = 'https://wingrowagritech.herokuapp.com/';
-const API_URL = "https://wingrowmarket.onrender.com/";
+const API_URL = "`${REACT_APP_API_ENDPOINT}/`";
 
  const getPublicContent = () => {
     return axios.get(API_URL + 'all');

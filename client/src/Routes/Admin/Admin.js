@@ -11,6 +11,8 @@ import authHeader from '../../services/auth.headers';
 import FarmerService from '../../services/farmer.service';
 import dayjs from 'dayjs'
 
+const{REACT_APP_API_ENDPOINT} = process.env
+
 const Admin = () => {
     const [Inward, setInward] = useState()
     const [Outward, setOutward] = useState()
@@ -154,7 +156,8 @@ const Admin = () => {
       //   })
       // }
       if(response === true){
-        axios.delete("https://wingrowmarket.onrender.com/cancelledstalls" , { headers: authHeader()  , data:{id: id}}).then(res=>{
+        // axios.delete("http://localhost:4000/cancelledstalls" , { headers: authHeader()  , data:{id: id}}).then(res=>{
+          axios.delete("`${REACT_APP_API_ENDPOINT}/cancelledstalls`" , { headers: authHeader()  , data:{id: id}}).then(res=>{
           const data = res?.data;
           const filter = CancelledStalls.filter(e=>e._id !== data._id);
           setCancelledStalls(filter)
