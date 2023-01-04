@@ -30,12 +30,20 @@ const Stall = ({ data, handleClick, bookedStalls, alreadyBooked, date }) => {
           }
 
           return (
-            <div className={stallClass}>
-              <div onClick={handleClick} id={_id} key={i}>
+            <div style={{cursor:"pointer"}} className="single-stall">
+            <img
+            className="stall-img"
+            src="../../images/stand.png"
+            alt="logo"
+          />
+          <div onClick={handleClick} id={_id} key={i}>
                 {stallName}
                 <br />
                 Rs.{stallPrice}
               </div>
+            <div className={stallClass}>
+              
+            </div>
             </div>
           );
         })}

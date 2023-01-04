@@ -144,7 +144,7 @@ export default function SignIn() {
         <div className="authbox">
           <img
             className="login_image"
-            src="./images/slidestall2.webp"
+            src="./images/2.png"
             alt="logo"
           />
           <form onSubmit={handleLogin} className="login_details">

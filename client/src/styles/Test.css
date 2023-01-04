@@ -64,10 +64,10 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 100px;
-  height: 50px;
-  margin: 10px;
-  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  /* color: #fff;
   cursor: not-allowed;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@
   align-items: center;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 1px; */
 }
 
 
@@ -85,18 +85,18 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 100px;
-  height: 50px;
-  margin: 10px;
+  width: 20px;
+  height: 20px;
+  margin: auto;
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
-  color: #fff;
+  color: #fff; */
 }
 
 .three-hundred {
@@ -105,18 +105,18 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 100px;
-  height: 50px;
-  margin: 10px;
+  width: 20px;
+  height: 20px;
+  margin: auto;
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
-  color: #fff;
+  color: #fff; */
 }
 
 
@@ -124,21 +124,21 @@
 .five-hundred {
   background: #A42A56;
   border-radius: 10px;
-  width: 100px;
-  height: 50px;
-  margin: 10px;
+  width: 20px;
+  height: 20px;
+  margin: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
   rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
-  color: #fff;
+  color: #fff; */
 }
 
 .advancebookinglink {
@@ -167,17 +167,17 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  width: 100px;
-  height: 50px;
-  margin: 10px;
+  width: 20px;
+  height: 20px;
+  margin: auto;
   cursor: pointer;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 1px; */
 }
 
 .seatsinput {
@@ -337,6 +337,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-top: 20px;
 }
 
+
+.single-stall{
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+}
 
 @media (max-width: 520px) {
   .Test {

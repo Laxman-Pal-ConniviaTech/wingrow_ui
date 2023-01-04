@@ -167,9 +167,9 @@ export default function Register() {
       <ToastContainer />
       {!Loading ? (
         <div className="authbox">
-          <img
+        <img
             className="login_image"
-            src="./images/slidestall2.webp"
+            src="./images/2.png"
             alt="logo"
           />
           <form

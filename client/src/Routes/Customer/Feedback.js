@@ -12,6 +12,7 @@ function Feedback() {
   const stars = Array(5).fill(0);
   const [currentValue, setCurrentValue] = useState(stars);
   const [feedback, setFeedback] = useState("");
+  const [noOfStars , setNoOfstars] = useState("")
 
   const [error, seterror] = useState("");
 
@@ -27,6 +28,7 @@ function Feedback() {
 
   const handleClick = (value) => {
     setCurrentValue(value);
+    setNoOfstars(value)
   };
 
   const handleSubmit = (event) => {
@@ -39,7 +41,7 @@ function Feedback() {
       seterror("Please Provide Feedback");
     } else {
       seterror("no error");
-      AuthService.feedback(feedback).then(() => {
+      AuthService.feedback(feedback , noOfStars).then(() => {
         // Once posted, the user will be notified
         toast.success("Feedback Send", {
           position: "top-center",

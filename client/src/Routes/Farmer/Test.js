@@ -235,28 +235,7 @@ function Test({ setbookingDetails , setValue }) {
           <h2 className="market-name">{Id}</h2>
           <div className="main_container_stalls">
             <Grid className="input-div-holder" container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <InputLabel className="stall-booking-lable">
-                  Enter Booking Date
-                </InputLabel>
-                <TextField
-                  inputlabelprops={{
-                    style: { fontSize: 14, fontFamily: "monospace" },
-                  }}
-                  name="booking-date"
-                  required
-                  fullWidth
-                  type="date"
-                  id="booking-date"
-                  autoFocus
-                  value={value}
-                  setValue={setvalue}
-                  onChange={handleChange}
-                  color="success"
-                  className="textfield"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid style={{margin:"auto"}} item xs={12} sm={6}>
                 <InputLabel className="stall-booking-lable">
                   Number Of Stall Required
                 </InputLabel>
