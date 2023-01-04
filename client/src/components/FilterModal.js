@@ -47,7 +47,7 @@ export default function FilterModal(
                     <button className='filter_btn' onClick={handleSearchDate}>Search</button>
                 </div>
 
-                <div className='header_items_center'>
+                <div className='header_items'>
                     <div className='header_items_filter'>
                         <span className='date_picker_label'>Filter between dates from</span>
                         <div className='date_picker'>
