@@ -37,6 +37,8 @@ function Ticket ({bookingDetails}) {
                 <br/>
                 <div>Stalls Booked : {bookStr}</div>
                 <br/>
+                <div>Booked At : {bookingDetails.bookedAt}</div>
+                <br/>
                 <div>Payment Id : {bookingDetails.paymentDetails}</div>
                 <br/>
                 <div>Addess : {bookingDetails.address}</div>

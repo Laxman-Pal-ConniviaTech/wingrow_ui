@@ -15,10 +15,10 @@ export default function Datepicker({setValue , value}) {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Stack spacing={3}>
         <DesktopDatePicker
-          label="Date"
           inputFormat="MM/DD/YYYY"
           value={value}
           onChange={handleChange}
+          className="textfield"
           renderInput={(params) => <TextField {...params} />}
         />
       </Stack>

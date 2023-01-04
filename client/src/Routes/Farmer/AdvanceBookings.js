@@ -164,6 +164,7 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
                   phone: userCurr.phone,
                   paymentDetails: orderId,
                   BookedStalls: stallsBooked,
+                  bookedAt: dayjs(value).format("YYYY-MM-DD"),
                   stallsBooked: bookedStalls.length,
                   totalAmount: price,
                 });
@@ -254,7 +255,8 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
             <InputLabel className="stall-booking-lable">
               Enter Booking Date
             </InputLabel>
-            <TextField
+            <Datepicker value={value} setValue={setvalue} />
+            {/* <TextField
               inputlabelprops={{
                 style: { fontSize: 14, fontFamily: "monospace" },
               }}
@@ -268,7 +270,7 @@ const AdvanceBookings = ({ setbookingDetails,setValue }) => {
               setValue={setvalue}
               color="success"
               className="textfield"
-            />
+            /> */}
           </Grid>
           <Grid  className="select-market-grid" item xs={12} sm={6}>
             <FormControl className="formcontrol" sx={{ width: "100%", fontSize: 14 }}>
